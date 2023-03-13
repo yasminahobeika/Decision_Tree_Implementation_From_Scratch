@@ -1,4 +1,5 @@
 # Predicting Airbnb Prices in New York City using Ensemble Machine Learning
+
 Link to project : [AirBNB](https://github.com/Pallav2207/Ensemble_learning_CS/tree/main/AirBnb)
 
 ## Introduction
@@ -6,6 +7,7 @@ Airbnb is an online marketplace for arranging lodging, primarily homestays, or t
 
 # Decision Tree Machine Learning Algorithm from scratch
 
+Link to project : [DecisionTrees_from_scratch](https://github.com/Pallav2207/Ensemble_learning_CS/tree/main/DTree_scratch)
+
 ## Introduction
 Welcome to the Decision Tree Machine Learning Algorithm implementation from scratch! This project aims to provide a comprehensive understanding of decision tree algorithms and how they work. Decision trees are a powerful and widely used supervised learning technique in machine learning that can be used for classification and regression tasks. In this project, we have implemented the decision tree algorithm from scratch in Python, without using any external libraries or frameworks. This implementation includes functionality for tree construction, and prediction. The code is well-documented and easy to understand.
-Link to project : [DecisionTrees_from_scratch](https://github.com/Pallav2207/Ensemble_learning_CS/tree/main/DTree_scratch)
