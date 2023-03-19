@@ -1,11 +1,7 @@
 # Decision Tree from scratch
 
-## Decision Tree Classifier
-
-The DecisionTreeClassifier is a class that builds a decision tree model for classification problems. It is implemented in Python and uses NumPy library for computations.
-
 ### Node_cls class
-This class defines a Node constructor for classification problems. It stores and initializes:
+This class defines a Node constructor for DT classification and regression problems. It stores and initializes:
 
 * Feature index used for best split: feature = None
 * Left child node: left_spl = None
@@ -15,16 +11,21 @@ This class defines a Node constructor for classification problems. It stores and
 * Output value of the node: out_val = None
 The is_leaf_node() function checks whether a node is a leaf node or not.
 
+## Decision Tree Classifier
+
+The DecisionTreeClassifier is a class that builds a decision tree model for classification problems. It is implemented in Python and uses NumPy library for computations.
+
+
+
 ### DecisionTreeClassifier class
 This class initializes a DecisionTree constructor for classification problems. It stores and initializes:
 
-* Maximum tree depth: max_depth = 100
-* Minimum samples required for splitting nodes: min_samples_split = 2
-* Number of features to be used for the tree: n_features = None
-* Cost function/Loss criterion for splitting nodes: criterion = 'entropy'
-* root: stores the root node of the decision tree
-* tree: stores the tree structure to generate a tree graph visualization
-
+*Maximum tree depth: max_depth = 100
+*Minimum samples required for splitting nodes: min_samples_split = 2
+*Number of features to be used for the tree: n_features = None
+*Cost function/Loss criterion for splitting nodes: criterion = 'entropy'
+*root: stores the root node of the decision tree
+*tree: stores the tree structure to generate a tree graph visualization
 The train() method of the DecisionTreeClassifier class takes two inputs:
 
 1. X, a matrix of input features.
@@ -44,4 +45,42 @@ The information_gain function takes as input:
 y_parent: Parent node data for labels.
 The DecisionTreeClassifier class builds a decision tree model for classification problems. It uses the _build_tree function to recursively grow the decision tree by finding the best split at each node based on a specified loss criterion. It then generates the tree structure and returns the root node of the decision tree.
 
+## Decision Tree Regressor
+This code implements a Decision Tree Regressor algorithm for regression problems. The algorithm is implemented in Python and uses NumPy library.
 
+### DecisionTreeRegressor class
+The DecisionTreeRegressor class is used to initialize the Decision Tree constructor for regression problems, which stores and initializes the following:
+
+
+* max_depth: Maximum tree depth. Default value is set to 100.
+* min_samples_split: Minimum samples required for splitting nodes. Default value is set to 2.
+* n_features: Number of features to be used for tree. Default is set to None.
+* criterion: Cost function or Loss criterion for splitting nodes. Default is set to 'mse'.
+The train() method of the DecisionTreeRegressor class is used to build the decision tree structure. It takes two inputs:
+
+1. X: a matrix of input features
+2. y: a vector of output labels
+
+
+The Node_reg class constructor initializes the tree nodes for the regression problem, which stores and initializes the following:
+
+* feature: Feature index used for best split.
+* left_spl: Left child node.
+* right_spl: Right child node.
+* spl_val: Node splitting threshold value.
+* var_redn: Variance loss value.
+* out_val: Output value of the node.
+The is_leaf_node() method of the Node_reg class is used to check whether a node is a leaf node or not.
+
+The _build_tree() method is a recursive function that builds the decision tree structure. It takes two inputs:
+
+1. X: a matrix of input features
+2. y: a vector of output labels
+
+The function returns tree nodes after each iteration.
+
+The _calculate_node_mean() method computes the leaf node value which is the mean of the output labels.
+
+The _split() method is used to split the data into left and right child nodes.
+
+The DecisionTreeClassifier & DecisionTreeRegressor classes also have a tree attribute that stores the tree structure to generate **tree graph visualization**.
