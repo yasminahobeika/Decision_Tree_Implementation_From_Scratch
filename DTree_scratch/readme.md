@@ -84,3 +84,19 @@ The _calculate_node_mean() method computes the leaf node value which is the mean
 The _split() method is used to split the data into left and right child nodes.
 
 The DecisionTreeClassifier & DecisionTreeRegressor classes also have a tree attribute that stores the tree structure to generate **tree graph visualization**.
+
+## Performance and comparison with SKlearn DT:
+
+| Dataset                        	| Our DT (time)    	| Our DT (accuracy or r2) 	| SKlearn DT (time) 	| SKlearn DT (accuracy or r2) 	|
+|--------------------------------	|------------------	|-------------------------	|-------------------	|-----------------------------	|
+| Breast Cancer (Classification) 	| 0.6694 seconds   	| 0.937                   	| 0.6808 seconds    	| 0.958                       	|
+| Iris (Classification)          	| 0.0662 seconds   	| 0.973                   	| 0.0682 seconds    	| 1                           	|
+| Diabetes (Regression)          	| 0.0547 seconds   	| 0.485                   	| 0.0596 seconds    	| -0.22                       	|
+| Airbnb (Regression)            	| 168.0722 seconds 	| 0.567                   	| 168.9311 seconds  	| 0.274                       	|
+
+As seen from these 4 experiments, the execution time of our DT is very close to the execution time of the SKlearn DT. Our DT has almost the same performace (measured by **accuracy**) in classification experiments, while our DT overperforms the SKlearn DT in regression (as measured by **r2 loss**).
+
+## Next Steps
+
+* Impelement pruning to prevent overfitting
+* Optimise for parallel processing so that this DT can be used for bagging and random forest implementations efficiently.
