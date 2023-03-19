@@ -18,12 +18,13 @@ The is_leaf_node() function checks whether a node is a leaf node or not.
 ### DecisionTreeClassifier class
 This class initializes a DecisionTree constructor for classification problems. It stores and initializes:
 
-*Maximum tree depth: max_depth = 100
-*Minimum samples required for splitting nodes: min_samples_split = 2
-*Number of features to be used for the tree: n_features = None
-*Cost function/Loss criterion for splitting nodes: criterion = 'entropy'
-*root: stores the root node of the decision tree
-*tree: stores the tree structure to generate a tree graph visualization
+* Maximum tree depth: max_depth = 100
+* Minimum samples required for splitting nodes: min_samples_split = 2
+* Number of features to be used for the tree: n_features = None
+* Cost function/Loss criterion for splitting nodes: criterion = 'entropy'
+* root: stores the root node of the decision tree
+* tree: stores the tree structure to generate a tree graph visualization
+
 The train() method of the DecisionTreeClassifier class takes two inputs:
 
 1. X, a matrix of input features.
