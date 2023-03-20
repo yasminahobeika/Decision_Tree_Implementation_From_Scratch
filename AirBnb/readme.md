@@ -11,11 +11,17 @@ We will use ensemble machine learning to predict the prices of Airbnb listings i
 
 * Random Forest: a decision tree-based ensemble method that combines multiple decision trees to improve the accuracy of the predictions.
 
+*Extra Random Forest: A variant of Random Forest that adds an extra level of randomness to the model by randomly selecting subsets of features and thresholds for each split. This helps to reduce overfitting and improve the generalization performance of the model.
+
 * Gradient Boosting: a machine learning technique that combines multiple weak models to create a strong model.
 
 * XGBoost: an implementation of gradient boosting that is optimized for speed and performance.
 
 * CatBoost: a gradient boosting library that is optimized for categorical features.
+
+* AdaBoost: A boosting algorithm that combines multiple weak classifiers to create a strong classifier. 
+
+*Stacking: Ccombines multiple models by training a meta-model on their predictions. It can improve the accuracy of the predictions by leveraging the strengths of different models and reducing their weaknesses.
 
 We will use the following steps:
 
@@ -38,5 +44,26 @@ We will present the results of our analysis in the following ways:
 
 3. Predictions: We will use the best model to predict the prices of new Airbnb listings in New York City.
 
+The results can be seen in the following table:
+
+ |---------------------------------------------------|
+ |               Model Performances                  |
+ |-----------------------------|-------|------|------|
+ |Model                        |  MSE  | RMSE | $R^2$|
+ |-----------------------------|-------|------|------|
+ |Regression Tree from Scratch | n/a   | 0.434| 0.597|
+ |Regression Tree              | 0.176 | 0.419| 0.596|
+ |Bagging                      | 0.153 | 0.391| 0.649|
+ |Random Forest                | 0.168 | 0.410| 0.613|
+ |Extra Random Forest          | 0.155 | 0.394| 0.644|
+ |Gradient Boosting            | 0.151 | 0.389| 0.653|
+ |CatBoost                     | 0.152 | 0.390| 0.651|
+ |XGBoost                      | 0.151 | 0.388| 0.654|
+ |ADABoost with DT             | 0.166 | 0.408| 0.618|
+ |ADABoost with CatBoost       | 0.153 | 0.391| 0.648|
+ |ADABoost with XGBoost        | 0.151 | 0.389| 0.653|
+ |Stacking                     | 0.151 | 0.387| 0.656|
+ |-----------------------------|-------|------|------|
+
 ## Conclusion
-In this project, we used ensemble machine learning to predict the prices of Airbnb listings in New York City. We evaluated the performance of four ensemble methods, including random forest, gradient boosting, XGBoost, and CatBoost. We also analyzed the feature importance of the models to determine which variables are most important in predicting the prices of Airbnb listings. Finally, we used the best model to predict the prices of new Airbnb listings in New York City.
+In this project, we used ensemble machine learning to predict the prices of Airbnb listings in New York City. We evaluated the performance of various ensemble methods, including random forest, gradient boosting, XGBoost, and CatBoost. We also analyzed the feature importance of the models to determine which variables are most important in predicting the prices of Airbnb listings. Finally, we stacked the best models together to predict the prices of new Airbnb listings in New York City.
