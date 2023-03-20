@@ -6,6 +6,9 @@ Airbnb is an online marketplace for arranging lodging, primarily homestays, or t
 ## Data
 We will use the publicly available New York City Airbnb Open Data from Kaggle. The dataset includes information about Airbnb listings in New York City from 2019, including listing ID, host ID, host name, neighbourhood group, neighbourhood, latitude, longitude, room type, price, minimum nights, number of reviews, and more. The dataset has 48,895 rows and 16 columns.
 
+## Packages to Download
+Required packages: pandas, math, numpy, matplotlib, seaborn, sklearn, sklearn.tree.DecisionTreeRegressor, sklearn.ensemble.BaggingRegressor, sklearn.ensemble.RandomForestRegressor, sklearn.ensemble.GradientBoostingRegressor, sklearn.ensemble.ExtraTreesRegressor, sklearn.ensemble.StackingRegressor, sklearn.metrics.mean_squared_error, sklearn.metrics.r2_score, sklearn.metrics.mean_absolute_error, sklearn.metrics.mean_absolute_percentage_error, sklearn.metrics.explained_variance_score, sklearn.model_selection.train_test_split, sklearn.model_selection.RandomizedSearchCV, sklearn.model_selection.KFold, sklearn.model_selection.GridSearchCV, sklearn.tree.plot_tree, sklearn.inspection.permutation_importance, time, xgboost, catboost.CatBoostRegressor, sklearn.inspection.permutation_importance
+
 ## Methodology
 We will use ensemble machine learning to predict the prices of Airbnb listings in New York City. Ensemble machine learning is a technique that combines multiple models to improve the accuracy of the predictions. We will use the following ensemble methods:
 
