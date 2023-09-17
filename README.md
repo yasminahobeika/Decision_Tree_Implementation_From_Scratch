@@ -98,5 +98,5 @@ As seen from these 4 experiments, the execution time of our DT is very close to 
 
 ## Next Steps
 
-* Impelement pruning to prevent overfitting
+* Impelement pruning to prevent overfitting.
 * Optimise for parallel processing so that this DT can be used for bagging and random forest implementations efficiently.
